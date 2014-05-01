@@ -1,0 +1,16 @@
+{
+  "name": "dock",
+  "main": "built/dock.js",
+  "version": "0.0.0",
+  "description": "Some module...",
+  "dependencies": {
+    "subject": "~0.4.1"
+  },
+  "devDependencies": {
+    "requirejs": "*",
+    "requirejs-text": "*",
+    "underscore": "*",
+    "jquery": "*",
+    "qunit": "*"
+  }
+}
