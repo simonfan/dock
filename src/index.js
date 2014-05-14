@@ -39,6 +39,14 @@ define(function (require, exports, module) {
 	dock.assignProto({
 
 		/**
+		 * The attribute to which the attached object will be saved.
+		 *
+		 * @property attachmentAttribute
+		 * @type {String}
+		 */
+		attachmentAttribute: 'attachment',
+
+		/**
 		 * If an attachment is passed in options hash,
 		 * does the attaching.
 		 *
@@ -47,8 +55,8 @@ define(function (require, exports, module) {
 		 */
 		initializeDock: function initializeDock(options) {
 
-			if (options && options.attachment) {
-				this.attach(options.attachment);
+			if (options && options[this.attachmentAttribute]) {
+				this.attach(options[this.attachmentAttribute]);
 			}
 		},
 
@@ -68,7 +76,7 @@ define(function (require, exports, module) {
 			this.beforeAttach(attachment, options);
 
 			// put attachment in place
-			this.attachment = attachment;
+			this[this.attachmentAttribute] = attachment;
 
 			// hook: after attach.
 			this.afterAttach(attachment, options);
@@ -93,7 +101,7 @@ define(function (require, exports, module) {
 				this.beforeDetach(attachment, options);
 
 				// unset this.attachment
-				delete this.attachment;
+				delete this[this.attachmentAttribute];
 
 				// hook: after detach.
 				this.afterDetach(attachment, options);
@@ -152,71 +160,4 @@ define(function (require, exports, module) {
 			return extended;
 		},
 	});
-
-/*
-	// static methods
-	dock.extendProxyMethods = function extendProxyMethods(methodNames) {
-
-
-		// object to hold the methods
-		var methods = {};
-
-		_.each(methodNames, function (method) {
-			methods[method] = _.partial(dock.prototype.invoke, method);
-		});
-
-		// create an extended dock
-		return this.extend(methods);
-	};
-
-	dock.extendRetrievalMethods = function extendRetrievalMethods(propertyNames) {
-		var methods = {};
-
-		_.each(propertyNames, function (property) {
-			methods[property] = _.partial(dock.prototype.retrieve, property);
-		});
-
-		return this.extend(methods);
-	};
-
-
-
-	// model dock
-	var modelDock = dock
-		// the proxy methods for model
-		.extendProxyMethods([
-			'get', 'set', 'escape', 'has', 'unset', 'clear',
-			'toJSON',
-			'sync', 'fetch', 'save', 'destroy',
-			'keys', 'values', 'pairs', 'invert', 'pick', 'omit',
-			'validate', 'isValid',
-			'url',
-			'parse',
-			'clone', 'isNew',
-			'hasChanged', 'changedAttributes',
-			'previous', 'previousAttributes'
-		])
-		// the retrieval methods for model
-		.extendRetrievalMethods([
-			'id', 'idAttribute', 'cid', 'attributes',
-			'changed', 'defaults',
-			'validationError',
-			'urlRoot',
-		]);
-
-	dock.model = modelDock;
-
-	// collection dock
-	var collectionDock = dock
-		// the proxy methods for collection
-		.extendProxyMethods([
-
-		])
-		.extendRetrievalMethods([
-
-		]);
-
-	dock.collection = collectionDock;
-
-*/
 });
