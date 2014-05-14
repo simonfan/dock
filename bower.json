@@ -1,7 +1,7 @@
 {
   "name": "dock",
   "main": "built/dock.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Some module...",
   "dependencies": {
     "subject": "0.5.6",

@@ -53,16 +53,6 @@
         {
             "file": "src/index.js",
             "line": 41,
-            "description": "The attribute to which the attached object will be saved.",
-            "itemtype": "property",
-            "name": "attachmentAttribute",
-            "type": "{String}",
-            "class": "",
-            "module": "dock"
-        },
-        {
-            "file": "src/index.js",
-            "line": 49,
             "description": "If an attachment is passed in options hash,\ndoes the attaching.",
             "itemtype": "method",
             "name": "initializeDock",
@@ -78,7 +68,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 63,
+            "line": 55,
             "description": "Sequence for setting an attachment",
             "itemtype": "method",
             "name": "attach",
@@ -103,7 +93,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 87,
+            "line": 79,
             "description": "Logic for detaching the current attachment.\nInvokes hooks.",
             "itemtype": "method",
             "name": "detach",
@@ -118,6 +108,16 @@
                 "description": "[description]",
                 "type": "[type]"
             },
+            "class": "",
+            "module": "dock"
+        },
+        {
+            "file": "src/index.js",
+            "line": 113,
+            "description": "The attribute to which the attached object will be saved.",
+            "itemtype": "property",
+            "name": "attachmentAttribute",
+            "type": "{String}",
             "class": "",
             "module": "dock"
         }

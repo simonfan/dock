@@ -39,14 +39,6 @@ define(function (require, exports, module) {
 	dock.assignProto({
 
 		/**
-		 * The attribute to which the attached object will be saved.
-		 *
-		 * @property attachmentAttribute
-		 * @type {String}
-		 */
-		attachmentAttribute: 'attachment',
-
-		/**
 		 * If an attachment is passed in options hash,
 		 * does the attaching.
 		 *
@@ -117,6 +109,14 @@ define(function (require, exports, module) {
 
 	// WRITABLE but NON-ENUMERABLE
 	dock.assignProto({
+
+		/**
+		 * The attribute to which the attached object will be saved.
+		 *
+		 * @property attachmentAttribute
+		 * @type {String}
+		 */
+		attachmentAttribute: 'attachment',
 
 		beforeAttach: _.noop,
 		afterAttach: _.noop,
