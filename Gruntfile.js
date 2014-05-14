@@ -114,7 +114,7 @@ module.exports = function (grunt) {
 
 					// exclude these modules AND their dependencies
 					// (excluding your bower dependencies)
-					exclude: ["subject"],
+					exclude: ["subject", "lodash"],
 
 					// excludeShallow
 					excludeShallow: [],
@@ -145,7 +145,7 @@ module.exports = function (grunt) {
 
 					// exclude these modules AND their dependencies
 					// (excluding your bower dependencies)
-					exclude: ["subject"],
+					exclude: ["subject", "lodash"],
 
 					// excludeShallow
 					excludeShallow: [],
