@@ -1,0 +1,116 @@
+{
+    "project": {
+        "name": "dock",
+        "version": "0.0.0"
+    },
+    "files": {
+        "src/index.js": {
+            "name": "src/index.js",
+            "modules": {
+                "dock": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "dock": {
+            "name": "dock",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/index.js",
+            "line": 5
+        }
+    },
+    "classes": {},
+    "classitems": [
+        {
+            "file": "src/index.js",
+            "line": 23,
+            "description": "The constructor for the dock object.",
+            "itemtype": "method",
+            "name": "dock",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": ""
+                },
+                {
+                    "name": "attachment",
+                    "description": "\n        Optionally provide a attachment that will initially fill the $el.",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "class": "",
+            "module": "dock"
+        },
+        {
+            "file": "src/index.js",
+            "line": 41,
+            "description": "If an attachment is passed in options hash,\ndoes the attaching.",
+            "itemtype": "method",
+            "name": "initializeDock",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "[description]",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "module": "dock"
+        },
+        {
+            "file": "src/index.js",
+            "line": 55,
+            "description": "Sequence for setting an attachment",
+            "itemtype": "method",
+            "name": "attach",
+            "params": [
+                {
+                    "name": "attachment",
+                    "description": "[description]",
+                    "type": "*"
+                },
+                {
+                    "name": "options",
+                    "description": "[description]",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "This"
+            },
+            "class": "",
+            "module": "dock"
+        },
+        {
+            "file": "src/index.js",
+            "line": 79,
+            "description": "Logic for detaching the current attachment.\nInvokes hooks.",
+            "itemtype": "method",
+            "name": "detach",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "",
+            "module": "dock"
+        }
+    ],
+    "warnings": []
+}

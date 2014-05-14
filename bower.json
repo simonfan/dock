@@ -1,7 +1,7 @@
 {
   "name": "dock",
   "main": "built/dock.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Some module...",
   "dependencies": {
     "subject": "0.5.6",
@@ -12,9 +12,7 @@
     "requirejs-text": "*",
     "underscore": "*",
     "jquery": "*",
-    "qunit": "*"
-  },
-  "resolutions": {
-    "subject": "0.5.6"
+    "qunit": "*",
+    "backbone": "~1.1.2"
   }
 }
