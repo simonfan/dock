@@ -85,9 +85,10 @@ define(function (require, exports, module) {
 		 * @return {[type]}         [description]
 		 */
 		detach: function detach(options) {
-			if (this.attachment) {
 
-				var attachment = this.attachment;
+			var attachment = this[this.attachmentAttribute];
+
+			if (attachment) {
 
 				// hook: before detach.
 				this.beforeDetach(attachment, options);

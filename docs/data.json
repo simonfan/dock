@@ -113,7 +113,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 113,
+            "line": 114,
             "description": "The attribute to which the attached object will be saved.",
             "itemtype": "property",
             "name": "attachmentAttribute",
