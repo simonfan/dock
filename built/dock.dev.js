@@ -134,15 +134,16 @@ define('dock',['require','exports','module','lodash','subject'],function (requir
 			this.assignProto(properties, {
 				get: function getAttachmentValue(key) {
 
-					var value = this.attachment[key];
+					var attachment = this[this.attachmentAttribute],
+						value      = attachment[key];
 					// if the value to be retrieved is a function
 					// bind the fn to the attachment before returning it
 					// to make sure the method, if executed, will be run
 					// in the attachment's context.
-					return (_.isFunction(value)) ? _.bind(value, this.attachment) : value;
+					return (_.isFunction(value)) ? _.bind(value, attachment) : value;
 				},
 				set: function setAttachmentValue(key, value) {
-					this.attachment[key] = value;
+					this[this.attachmentAttribute][key] = value;
 				}
 			});
 

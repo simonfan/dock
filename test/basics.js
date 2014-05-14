@@ -74,6 +74,29 @@
 				beforeDetach: 1,
 				afterDetach: 1,
 			});
-		})
+		});
+
+		it('can store the attachment on different attributes', function () {
+
+			var objDock = dock.extend({
+				attachmentAttribute: 'attachedObject',
+			});
+
+			objDock.defineProxies(['prop', 'method']);
+
+			var obj = {
+				prop: 'value',
+				method: function () {
+					return 'result';
+				}
+			};
+
+
+			var objDockInstance = objDock({ attachedObject: obj });
+
+			objDockInstance.prop.should.eql('value');
+			objDockInstance.method().should.eql('result');
+
+		});
 	});
 });
